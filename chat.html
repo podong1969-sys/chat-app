@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<script src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <title>채팅방</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/chat.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h2>채팅방</h2>
+    <div id="status"></div>
+    <ul id="userList" style="text-align:left; list-style:none; padding-left:0;"></ul>
+    <div id="chatBox" class="chat-box"></div>
+    <input type="text" id="messageInput" placeholder="메시지를 입력하세요" />
+    <button onclick="sendMessage()">보내기</button>
+  </div>
+</body>
+</html>

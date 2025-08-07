@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<script src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <title>닉네임 설정</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function setNickname() {
+      const nickname = document.getElementById("nicknameInput").value;
+      if (!nickname) {
+        alert("닉네임을 입력하세요!");
+        return;
+      }
+      alert("닉네임 '" + nickname + "' 으로 설정 완료!");
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>닉네임을 입력하세요</h2>
+    <input type="text" id="nicknameInput" placeholder="닉네임 입력" />
+    <button onclick="setNickname()">입장</button>
+    <p id="nicknameError" class="error">
+    
+    </p><button onclick="setNickname()">입장</button>
+
+  </div>
+</body>
+</html>
