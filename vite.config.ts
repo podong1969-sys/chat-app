@@ -1,34 +1,14 @@
-
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+
+// 깃허브 페이지 저장소명으로 바꿔야 함
+const repoName = '/your-repo-name/'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: repoName,
   plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
+  build: {
+    outDir: 'dist',
   },
 })
-// vite.config.ts
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-export default defineConfig({
-  plugins: [react()],
-})
-// vite.config.ts
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-export default defineConfig({
-  plugins: [react()],
-  root: '.',
-})
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-export default defineConfig({
-  plugins: [react()],
-  base: '/<리포지토리이름>/', // 예: /chat-app/
-})
-
